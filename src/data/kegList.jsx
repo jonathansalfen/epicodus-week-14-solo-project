@@ -1,4 +1,4 @@
-const kegList = [
+export default [
   {
     name: 'Orange Dreaam',
     brand: 'Sutherland',
