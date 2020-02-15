@@ -1,10 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import ChangeKegs from './ChangeKegs';
+import OnTap from './OnTap';
 
 function Employee() {
   return(
     <div>
       <p>This is employee</p>
+      <ChangeKegs />
+      <OnTap />
     </div>
   );
 }

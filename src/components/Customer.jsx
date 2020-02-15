@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import OnTap from './OnTap';
 
 function Customer() {
   return(
     <div>
       <p>This is customer</p>
+      <OnTap />
     </div>
   );
 }
