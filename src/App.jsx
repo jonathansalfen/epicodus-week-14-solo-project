@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Employee from './components/Employee';
 import Customer from './components/Customer';
+import Error404 from './components/Error404';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route exact path='/' component={About} />
       <Route exact path='/employee' component={Employee} />
       <Route exact path='/customer' component={Customer} />
+      <Route component={Error404} />
     </Switch>
     <Footer />
     </div>
