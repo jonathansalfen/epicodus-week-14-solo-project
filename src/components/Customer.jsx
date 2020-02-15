@@ -1,11 +1,11 @@
 import React from 'react';
-import OnTap from './OnTap';
+import KegsOnTap from './KegsOnTap';
 
 function Customer() {
   return(
     <div>
       <p>This is customer</p>
-      <OnTap />
+      <KegsOnTap />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import kegList from '../data/kegList';
 import Keg from './Keg';
 
-function OnTap() {
+function KegsOnTap() {
 
   const styledComponent = {
     fontWeight: 'bold'
@@ -10,7 +10,7 @@ function OnTap() {
 
   return(
     <div>
-      <p>This is OnTap</p>
+      <p>This is KegsOnTap</p>
       <table>
         <tr style={styledComponent}>
           <th>Name</th>
@@ -35,4 +35,4 @@ function OnTap() {
   );
 }
 
-export default OnTap;
+export default KegsOnTap;
