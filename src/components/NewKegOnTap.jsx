@@ -3,6 +3,7 @@ import React from 'react';
 function NewKegOnTap() {
   return(
     <div>
+      <p>Add a new keg below:</p>
       <form>
         <input
           type='text'

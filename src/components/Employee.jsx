@@ -1,12 +1,12 @@
 import React from 'react';
-import ChangeKegs from './ChangeKegs';
+import NewKegOnTap from './NewKegOnTap';
 import KegsOnTap from './KegsOnTap';
 
 function Employee() {
   return(
     <div>
       <p>This is employee</p>
-      <ChangeKegs />
+      <NewKegOnTap />
       <KegsOnTap />
     </div>
   );
