@@ -5,6 +5,7 @@ function NavBar() {
   return(
     <div>
       <p>This is a navbar</p>
+      <Link to="/">Home</Link> | <Link to="/employee">Sample Employee Page</Link> | <Link to="/customer">Sample Customer Page</Link>
     </div>
   );
 }
