@@ -9,6 +9,7 @@ function Keg(props){
       <td>{props.type}</td>
       <td>{props.price}</td>
       <td>{props.alcoholContent}</td>
+      <td>{props.pintsAvailable}</td>
     </tr>
   );
 }
@@ -18,7 +19,8 @@ Keg.propTypes = {
   brand: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  alcoholContent: PropTypes.number.isRequired
+  alcoholContent: PropTypes.number.isRequired,
+  pintsAvailable: PropTypes.number.isRequired
 }
 
 export default Keg;

@@ -13,6 +13,7 @@ function OnTap() {
           <th>Type</th>
           <th>Price</th>
           <th>Alcohol Content</th>
+          <th>Pints Available</th>
         </tr>
         {kegList.map((keg, index) =>
           <Keg
@@ -21,6 +22,7 @@ function OnTap() {
             type={keg.type}
             price={keg.price}
             alcoholContent={keg.alcoholContent}
+            pintsAvailable={keg.pintsAvailable}
           />
         )}
       </table>
