@@ -3,11 +3,16 @@ import kegList from '../data/kegList';
 import Keg from './Keg';
 
 function OnTap() {
+
+  const styledComponent = {
+    fontWeight: 'bold'
+  }
+
   return(
     <div>
       <p>This is OnTap</p>
       <table>
-        <tr>
+        <tr style={styledComponent}>
           <th>Name</th>
           <th>Brand</th>
           <th>Type</th>
