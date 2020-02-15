@@ -1,6 +1,6 @@
 import React from 'react';
 
-const iconPath = process.env.PUBLIC_URL + '/assets/images/;'
+const iconPath = process.env.PUBLIC_URL + '/assets/images/';
 
 
 function About() {
