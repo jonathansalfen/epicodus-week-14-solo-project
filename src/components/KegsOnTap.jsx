@@ -6,7 +6,7 @@ function KegsOnTap() {
 
   const styledComponent = {
     fontWeight: 'bold'
-  }
+  };
 
   return(
     <div>

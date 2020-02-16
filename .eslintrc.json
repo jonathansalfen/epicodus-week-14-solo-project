@@ -3,6 +3,11 @@
     "browser": true,
     "es6": true
   },
+  "settings": {
+   "react": {
+     "version": "16.12.0"
+   }
+ },
   "extends": "eslint:recommended",
   "parserOptions": {
     "ecmaFeatures": {

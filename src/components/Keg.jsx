@@ -21,6 +21,6 @@ Keg.propTypes = {
   price: PropTypes.number.isRequired,
   alcoholContent: PropTypes.number.isRequired,
   pintsAvailable: PropTypes.number.isRequired
-}
+};
 
 export default Keg;

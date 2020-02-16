@@ -11,14 +11,14 @@ import Error404 from './components/Error404';
 function App() {
   return (
     <div>
-    <Header />
-    <Switch>
-      <Route exact path='/' component={About} />
-      <Route exact path='/employee' component={Employee} />
-      <Route exact path='/customer' component={Customer} />
-      <Route component={Error404} />
-    </Switch>
-    <Footer />
+      <Header />
+      <Switch>
+        <Route exact path='/' component={About} />
+        <Route exact path='/employee' component={Employee} />
+        <Route exact path='/customer' component={Customer} />
+        <Route component={Error404} />
+      </Switch>
+      <Footer />
     </div>
   );
 }
