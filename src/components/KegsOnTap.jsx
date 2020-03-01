@@ -4,6 +4,14 @@ import PropTypes from 'prop-types';
 import kegList from '../data/kegList';
 
 class KegsOnTap extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      kegList: null
+    };
+
+  }
+
   componentDidMount(props) {
     if (this.props.keglist === null) {
       this.setState({kegList: kegList});
@@ -11,6 +19,7 @@ class KegsOnTap extends React.Component {
   }
 
   render() {
+
     return(
     <div>
       <p>This is KegsOnTap</p>
