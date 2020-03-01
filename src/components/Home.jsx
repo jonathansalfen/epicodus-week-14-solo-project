@@ -8,7 +8,7 @@ function Home() {
     width: "3em",
     backgroundColor: "#C3CEDB",
     padding: "1em",
-    border: "#004293 solid 3px"
+    border: "black solid 3px"
   }
 
   return (
@@ -27,7 +27,7 @@ function Home() {
       <img style={{width: "3em"}} src={`${iconPath}beer-keg.svg`} alt="barley" />
       <img style={{width: "3em"}} src={`${iconPath}bottle-opener.svg`} alt="barley" />
       <div>
-      <img className={beerBlue} src={`${iconPath}beer-blue.svg`} alt="barley" />
+      <img style={beerBlue} src={`${iconPath}beer-blue.svg`} alt="barley" />
       </div>
     </div>
   );

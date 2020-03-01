@@ -1,18 +1,15 @@
 import React from 'react';
-import kegList from '../data/kegList';
 import Keg from './Keg';
+import PropTypes from 'prop-types';
 
-function KegsOnTap() {
-
-  const styledComponent = {
-    fontWeight: 'bold'
-  };
+function KegsOnTap(props) {
+  const kegList = props.kegList;
 
   return(
     <div>
       <p>This is KegsOnTap</p>
       <table>
-        <tr style={styledComponent}>
+        <tr>
           <th>Name</th>
           <th>Brand</th>
           <th>Type</th>
@@ -20,7 +17,7 @@ function KegsOnTap() {
           <th>Alcohol Content</th>
           <th>Pints Available</th>
         </tr>
-        {kegList.map((keg, index) =>
+        {kegList.map((keg) =>
           <Keg
             name={keg.name}
             brand={keg.brand}
