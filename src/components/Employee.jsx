@@ -13,4 +13,8 @@ function Employee(props) {
   );
 }
 
+Employee.propTypes = {
+  kegList: PropTypes.array.isRequired
+};
+
 export default Employee;

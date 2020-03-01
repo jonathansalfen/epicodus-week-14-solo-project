@@ -32,4 +32,8 @@ function KegsOnTap(props) {
   );
 }
 
+KegsOnTap.propTypes = {
+  kegList: PropTypes.array.isRequired
+};
+
 export default KegsOnTap;

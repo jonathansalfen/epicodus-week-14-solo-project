@@ -11,4 +11,8 @@ function Customer(props) {
   );
 }
 
+Customer.propTypes = {
+  kegList: PropTypes.array.isRequired
+};
+
 export default Customer;
