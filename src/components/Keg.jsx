@@ -10,6 +10,7 @@ function Keg(props){
       <td>{props.price}</td>
       <td>{props.alcoholContent}</td>
       <td>{props.pintsAvailable}</td>
+      <td><button>Pint Sold</button></td>
     </tr>
   );
 }
