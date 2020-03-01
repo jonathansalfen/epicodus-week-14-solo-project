@@ -10,8 +10,6 @@ import Header from './Header';
 
 import '../style/App.scss';
 
-import kegList from '../data/kegList';
-
 class App extends React.Component {
 
   constructor(props) {
@@ -22,13 +20,7 @@ class App extends React.Component {
 
   }
 
-  componentDidMount() {
-    // if (this.state.keglist === null) {
-      this.setState({kegList: kegList});
-
-  }
-
-  componentDidUpdate() {
+  shouldComponentUpdate() {
     console.log(this.state);
   }
 
