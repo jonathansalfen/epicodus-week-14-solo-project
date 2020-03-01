@@ -17,9 +17,19 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      kegList: kegList
+      kegList: null
     };
 
+  }
+
+  componentDidMount() {
+    // if (this.state.keglist === null) {
+      this.setState({kegList: kegList});
+
+  }
+
+  componentDidUpdate() {
+    console.log(this.state);
   }
 
   render() {
