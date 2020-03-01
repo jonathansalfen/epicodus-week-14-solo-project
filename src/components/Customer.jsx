@@ -1,11 +1,12 @@
 import React from 'react';
 import KegsOnTap from './KegsOnTap';
+import PropTypes from 'prop-types';
 
-function Customer() {
+function Customer(props) {
   return(
     <div>
       <p>This is customer</p>
-      <KegsOnTap />
+      <KegsOnTap kegList={props.kegList}/>
     </div>
   );
 }

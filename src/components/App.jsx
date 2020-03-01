@@ -29,7 +29,7 @@ class App extends React.Component {
       <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/employee' render={()=><Employee kegList={this.state.kegList} />} />
-      <Route exact path='/customer' component={Customer} />
+      <Route exact path='/customer' render={()=><Customer kegList={this.state.kegList} />} />
       <Route component={Error404} />
       </Switch>
       <Footer />
