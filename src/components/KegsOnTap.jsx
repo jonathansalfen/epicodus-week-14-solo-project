@@ -19,9 +19,14 @@ class KegsOnTap extends React.Component {
     // cat[0].id = v4();
     // console.log({...cat[0], id: v4()});
     const kegListWithID = kegList.map(keg => {
-      let ceg = keg;
-      ceg[id]: v4();
-            return {ceg};
+            return {  name: keg.name,
+              brand: keg.brand,
+              type: keg.type,
+              price: keg.price,
+              alcoholContent: keg.alcoholContent,
+              pintsAvailable: keg.pintsAvailable,
+              tapLocation: keg.tapLocation,
+              id: v4()}
     });
     console.log(kegListWithID);
     if (this.props.keglist === null) {
