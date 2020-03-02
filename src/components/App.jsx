@@ -15,14 +15,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <Header />
-      <Switch>
-      <Route exact path='/' component={Home} />
-      <Route exact path='/employee' render={()=><Employee />} />
-      <Route exact path='/customer' render={()=><Customer />} />
-      <Route component={Error404} />
-      </Switch>
-      <Footer />
+        <Header />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/employee' render={()=><Employee />} />
+          <Route exact path='/customer' render={()=><Customer />} />
+          <Route component={Error404} />
+        </Switch>
+        <Footer />
       </div>
     );
   }
