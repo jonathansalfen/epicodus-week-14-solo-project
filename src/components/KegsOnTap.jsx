@@ -1,7 +1,7 @@
 import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
-import kegList from '../data/kegList';
+import kegListData from '../data/kegList';
 import { v4 } from 'uuid';
 
 class KegsOnTap extends React.Component {
@@ -14,23 +14,18 @@ class KegsOnTap extends React.Component {
   }
 
   componentDidMount(props) {
-    const cat = kegList;
-
-    // cat[0].id = v4();
-    // console.log({...cat[0], id: v4()});
-    const kegListWithID = kegList.map(keg => {
-            return {  name: keg.name,
-              brand: keg.brand,
-              type: keg.type,
-              price: keg.price,
-              alcoholContent: keg.alcoholContent,
-              pintsAvailable: keg.pintsAvailable,
-              tapLocation: keg.tapLocation,
-              id: v4()}
-    });
-    console.log(kegListWithID);
     if (this.props.keglist === null) {
-      this.setState({kegList: kegList});
+      const kegListWithID = kegListData.map(keg => {
+        return {name: keg.name,
+          brand: keg.brand,
+          type: keg.type,
+          price: keg.price,
+          alcoholContent: keg.alcoholContent,
+          pintsAvailable: keg.pintsAvailable,
+          tapLocation: keg.tapLocation,
+          id: v4()}
+        });
+      this.setState({kegList: kegListWithID});
     }
   }
 
@@ -49,7 +44,8 @@ class KegsOnTap extends React.Component {
             <th>Alcohol Content</th>
             <th>Pints Available</th>
           </tr>
-          {kegList.map((keg) =>
+          {console.log(this.state.kegList)}
+          {this.state.kegList.map((keg) =>
             <Keg
               name={keg.name}
               brand={keg.brand}
@@ -57,6 +53,8 @@ class KegsOnTap extends React.Component {
               price={keg.price}
               alcoholContent={keg.alcoholContent}
               pintsAvailable={keg.pintsAvailable}
+              // id={keg.id}
+              // key={keg.id}
             />
           )}
         </table>

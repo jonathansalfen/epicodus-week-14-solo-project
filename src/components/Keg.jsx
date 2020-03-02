@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Keg(props){
   return (
-    <tr>
+    <tr key={props.id} id={props.id}>
       <td>{props.name}</td>
       <td>{props.brand}</td>
       <td>{props.type}</td>
@@ -21,7 +21,9 @@ Keg.propTypes = {
   type: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   alcoholContent: PropTypes.number.isRequired,
-  pintsAvailable: PropTypes.number.isRequired
+  pintsAvailable: PropTypes.number.isRequired,
+  // id: PropTypes.string.isRequired,
+  // key: PropTypes.string.isRequired
 };
 
 export default Keg;
