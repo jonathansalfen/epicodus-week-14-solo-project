@@ -2,6 +2,7 @@ import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
 import kegList from '../data/kegList';
+import { v4 } from 'uuid';
 
 class KegsOnTap extends React.Component {
   constructor(props) {
@@ -11,14 +12,20 @@ class KegsOnTap extends React.Component {
     };
 
   }
+  addV4(keg) {
+    keg.id = v4();
+    return keg;
+  }
 
   componentDidMount(props) {
+    console.log(kegList);
+    const kegListWithID = kegList.map((keg) => addV4(keg))
+    console.log(kegListWithID);
     if (this.props.keglist === null) {
       this.setState({kegList: kegList});
     }
-    // this.state.kegList.forEach((beer) => console.log(beer));
-    console.log(this.state);
   }
+
 
   render() {
 
