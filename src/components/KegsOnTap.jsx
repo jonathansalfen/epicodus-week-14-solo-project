@@ -13,8 +13,7 @@ class KegsOnTap extends React.Component {
 
   }
 
-  componentDidMount(props) {
-    if (this.props.keglist === null) {
+  getDerivedStateFromProps() {
       const kegListWithID = kegListData.map(keg => {
         return {name: keg.name,
           brand: keg.brand,
@@ -26,7 +25,8 @@ class KegsOnTap extends React.Component {
           id: v4()}
         });
       this.setState({kegList: kegListWithID});
-    }
+    //   if (this.state.keglist === null) {
+    // }
   }
 
 
