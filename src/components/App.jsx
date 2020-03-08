@@ -19,12 +19,9 @@ class App extends React.Component {
     };
   }
 
-  handleNewKegOnTapSubmit(event) {
-    event.preventDefault();
-    console.log(`The event that was submited is ${event}`);
-    console.log(event);
+  handleAddNewKegOnTapToKeglist(newKeg) {
+    this.setState({kegList: [...this.state.kegList, newKeg]});
   }
-
 
     // componentDidMount() {
       //   // if (this.state.keglist === null) {
@@ -51,7 +48,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/employee' render={()=><Employee
             kegList={this.state.kegList}
-            handleNewKegOnTapSubmit={(e) => this.handleNewKegOnTapSubmit(e)}
+            onNewKegOnTapAddition={(e) => this.handleAddNewKegOnTapToKeglist(e)}
           />} />
           <Route exact path='/customer' render={()=><Customer kegList={this.state.kegList}/>} />
           <Route component={Error404} />
