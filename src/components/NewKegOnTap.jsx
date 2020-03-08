@@ -1,14 +1,15 @@
 import React from 'react';
 
-function NewKegOnTap() {
+function NewKegOnTap(props) {
   return(
     <div>
       <p>Add a new keg below:</p>
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={props.handleNewKegOnTapSubmit}>
         <input
           type='text'
           id='name'
           placeholder='Beer Name'
+          name={props.name}
         />
         <input
           type='text'

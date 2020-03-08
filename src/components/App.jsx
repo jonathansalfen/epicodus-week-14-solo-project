@@ -12,6 +12,36 @@ import kegListData from '../data/kegList';
 import '../style/App.scss';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      kegList: kegListData
+    };
+  }
+
+  handleNewKegOnTapSubmit(event) {
+    event.preventDefault();
+    console.log(`The event that was submited is ${event}`);
+    console.log(event);
+  }
+
+
+    // componentDidMount() {
+      //   // if (this.state.keglist === null) {
+        //     const kegListWithID = kegListData.map(keg => {
+          //       return {name: keg.name,
+            //         brand: keg.brand,
+            //         type: keg.type,
+            //         price: keg.price,
+            //         alcoholContent: keg.alcoholContent,
+            //         pintsAvailable: keg.pintsAvailable,
+            //         tapLocation: keg.tapLocation,
+            //         id: v4()}
+            //       });
+            //       this.setState({kegList: kegListWithID});
+            //     // }
+            //   }
+
 
   render() {
     return (
@@ -19,8 +49,11 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/employee' render={()=><Employee />} />
-          <Route exact path='/customer' render={()=><Customer />} />
+          <Route exact path='/employee' render={()=><Employee
+            kegList={this.state.kegList}
+            handleNewKegOnTapSubmit={(e) => this.handleNewKegOnTapSubmit(e)}
+          />} />
+          <Route exact path='/customer' render={()=><Customer kegList={this.state.kegList}/>} />
           <Route component={Error404} />
         </Switch>
         <Footer />

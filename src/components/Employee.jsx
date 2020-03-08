@@ -7,7 +7,7 @@ function Employee(props) {
   return(
     <div>
       <p>This is employee</p>
-      <NewKegOnTap />
+      <NewKegOnTap handleNewKegOnTapSubmit={props.handleNewKegOnTapSubmit}/>
       <KegsOnTap kegList={props.kegList}/>
     </div>
   );
