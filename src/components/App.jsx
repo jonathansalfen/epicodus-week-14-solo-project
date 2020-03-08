@@ -8,6 +8,7 @@ import Footer from './Footer';
 import Home from './Home.jsx';
 import Header from './Header';
 
+import kegListData from '../data/kegList';
 import '../style/App.scss';
 
 class App extends React.Component {

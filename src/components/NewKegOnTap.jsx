@@ -4,7 +4,7 @@ function NewKegOnTap() {
   return(
     <div>
       <p>Add a new keg below:</p>
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <input
           type='text'
           id='name'
@@ -40,6 +40,7 @@ function NewKegOnTap() {
           id='tapLocation'
           placeholder='Tap Location'
         />
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );

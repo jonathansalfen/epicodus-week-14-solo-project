@@ -1,38 +1,36 @@
 import React from 'react';
 import Keg from './Keg';
 import PropTypes from 'prop-types';
-import kegListData from '../data/kegList';
 import { v4 } from 'uuid';
 
 class KegsOnTap extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      kegList: null
+      kegList: kegListData
     };
-
   }
 
-  getDerivedStateFromProps() {
-      const kegListWithID = kegListData.map(keg => {
-        return {name: keg.name,
-          brand: keg.brand,
-          type: keg.type,
-          price: keg.price,
-          alcoholContent: keg.alcoholContent,
-          pintsAvailable: keg.pintsAvailable,
-          tapLocation: keg.tapLocation,
-          id: v4()}
-        });
-      this.setState({kegList: kegListWithID});
-    //   if (this.state.keglist === null) {
-    // }
-  }
+  // componentDidMount() {
+  //   // if (this.state.keglist === null) {
+  //     const kegListWithID = kegListData.map(keg => {
+  //       return {name: keg.name,
+  //         brand: keg.brand,
+  //         type: keg.type,
+  //         price: keg.price,
+  //         alcoholContent: keg.alcoholContent,
+  //         pintsAvailable: keg.pintsAvailable,
+  //         tapLocation: keg.tapLocation,
+  //         id: v4()}
+  //       });
+  //       this.setState({kegList: kegListWithID});
+  //     // }
+  //   }
 
 
-  render() {
+    render() {
 
-    return(
+      return(
       <div>
         <p>This is KegsOnTap</p>
         <table>
@@ -44,27 +42,29 @@ class KegsOnTap extends React.Component {
             <th>Alcohol Content</th>
             <th>Pints Available</th>
           </tr>
-          {console.log(this.state.kegList)}
+
+
+
           {this.state.kegList.map((keg) =>
             <Keg
-              name={keg.name}
-              brand={keg.brand}
-              type={keg.type}
-              price={keg.price}
-              alcoholContent={keg.alcoholContent}
-              pintsAvailable={keg.pintsAvailable}
-              // id={keg.id}
-              // key={keg.id}
+            name={keg.name}
+            brand={keg.brand}
+            type={keg.type}
+            price={keg.price}
+            alcoholContent={keg.alcoholContent}
+            pintsAvailable={keg.pintsAvailable}
+            // id={keg.id}
+            // key={keg.id}
             />
-          )}
-        </table>
-      </div>
-    );
-  }
-}
+            )}
+          </table>
+        </div>
+        );
+      }
+    }
 
-KegsOnTap.propTypes = {
-  kegList: PropTypes.array.isRequired
-};
+    KegsOnTap.propTypes = {
+      kegList: PropTypes.array.isRequired
+    };
 
-export default KegsOnTap;
+    export default KegsOnTap;
